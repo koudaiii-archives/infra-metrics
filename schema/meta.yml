@@ -1,8 +1,8 @@
 ---
 "$schema": http://json-schema.org/draft-04/hyper-schema
-description: Duration API v1 Alpha Document
-id: duration
+description: infra-metrics API v1 Alpha Document
+id: infra-metrics
 links:
-- href: https://<your-duration-server>.com
+- href: https://<your-infra-metrics-server>.com
   rel: self
-  title: Duration API v1 Alpha
+  title: infra-metrics API v1 Alpha

@@ -1,3 +1,5 @@
+# Duration API v1 Alpha
+
 ## <a name="resource-duration"></a>Duration
 
 FIXME
@@ -23,7 +25,7 @@ POST /durations
 #### Curl Example
 
 ```bash
-$ curl -n -X POST https://<your-duration-server>.com/durations \
+$ curl -n -X POST https://<your-infra-metrics-server>.com/durations \
   -H "Content-Type: application/json" \
  \
   -d '{
@@ -58,7 +60,7 @@ DELETE /durations/{duration_id_or_name}
 #### Curl Example
 
 ```bash
-$ curl -n -X DELETE https://<your-duration-server>.com/durations/$DURATION_ID_OR_NAME \
+$ curl -n -X DELETE https://<your-infra-metrics-server>.com/durations/$DURATION_ID_OR_NAME \
   -H "Content-Type: application/json" \
 ```
 
@@ -90,7 +92,7 @@ GET /durations/{duration_id_or_name}
 #### Curl Example
 
 ```bash
-$ curl -n https://<your-duration-server>.com/durations/$DURATION_ID_OR_NAME
+$ curl -n https://<your-infra-metrics-server>.com/durations/$DURATION_ID_OR_NAME
 ```
 
 
@@ -121,7 +123,7 @@ GET /durations
 #### Curl Example
 
 ```bash
-$ curl -n https://<your-duration-server>.com/durations
+$ curl -n https://<your-infra-metrics-server>.com/durations
 ```
 
 
@@ -154,7 +156,7 @@ PATCH /durations/{duration_id_or_name}
 #### Curl Example
 
 ```bash
-$ curl -n -X PATCH https://<your-duration-server>.com/durations/$DURATION_ID_OR_NAME \
+$ curl -n -X PATCH https://<your-infra-metrics-server>.com/durations/$DURATION_ID_OR_NAME \
   -H "Content-Type: application/json" \
  \
   -d '{

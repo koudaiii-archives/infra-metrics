@@ -7,7 +7,7 @@
 set -e
 
 BASE_DIRECTORY=`pwd`
-if [ $(basename $BASE_DIRECTORY) != "duration_server" ] ; then
+if [ $(basename $BASE_DIRECTORY) != "infra-metrics" ] ; then
   echo "Please run this script in project root"
   exit 1
 fi
@@ -18,6 +18,7 @@ bundle exec prmd combine \
   --meta schema/meta.yml \
   schema/schemata/ > schema/schema.json
 bundle exec prmd doc \
+  --prepend docs/api-v1-alpha-header.md \
   schema/schema.json > docs/api-v1-alpha.md
 echo "    Successfully generated"
 
