@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unique:</strong>
+  <%= @duration.unique_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @duration.category %>
+</p>
+
+<p>
+  <strong>Account name:</strong>
+  <%= @duration.account_name %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @duration.started_at %>
+</p>
+
+<p>
+  <strong>Ended at:</strong>
+  <%= @duration.ended_at %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @duration.minutes %>
+</p>
+
+<%= link_to 'Edit', edit_duration_path(@duration) %> |
+<%= link_to 'Back', durations_path %>
