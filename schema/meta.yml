@@ -1,0 +1,8 @@
+---
+"$schema": http://json-schema.org/draft-04/hyper-schema
+description: Duration API v1 Alpha Document
+id: duration
+links:
+- href: https://<your-duration-server>.com
+  rel: self
+  title: Duration API v1 Alpha
