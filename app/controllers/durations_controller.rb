@@ -21,6 +21,13 @@ class DurationsController < ApplicationController
   def edit
   end
 
+  # POST /durations/request_outgoing_webhook
+  # README https://my.slack.com/services/new/outgoing-webhook
+  def request_outgoing_webhook
+    json_request = JSON.parse(request.body.read)
+    parse_outgoing_webhook(json_request["text"])
+  end
+
   # POST /durations
   # POST /durations.json
   def create
@@ -70,5 +77,11 @@ class DurationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def duration_params
       params.require(:duration).permit(:unique_id, :category, :account_name, :started_at, :ended_at, :minutes)
+    end
+
+    def parse_outgoing_webhook(text)
+      # text.match(/\<https:\/\/app\.wercker\.com\/\#build\/(.+?)\|.*\sof\s(.+?)\sby\s(.+?)\spassed/)
+      # text.match(/[wantedly:production] awakia invoked 'deploy'/)
+      # text.match(/^\[wantedly:production\].*invoked\s'deploy:unlock'/)
     end
 end
